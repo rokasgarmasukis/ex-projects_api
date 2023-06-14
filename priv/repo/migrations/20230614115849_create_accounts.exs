@@ -4,7 +4,7 @@ defmodule ProjectsApi.Repo.Migrations.CreateAccounts do
   def change do
     create table(:accounts) do
       add :email, :string
-      add :hash_password, :string
+      add :hashed_password, :string
 
       timestamps()
     end

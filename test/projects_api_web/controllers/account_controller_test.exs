@@ -7,13 +7,13 @@ defmodule ProjectsApiWeb.AccountControllerTest do
 
   @create_attrs %{
     email: "some email",
-    hash_password: "some hash_password"
+    hashed_password: "some hashed_password"
   }
   @update_attrs %{
     email: "some updated email",
-    hash_password: "some updated hash_password"
+    hashed_password: "some updated hashed_password"
   }
-  @invalid_attrs %{email: nil, hash_password: nil}
+  @invalid_attrs %{email: nil, hashed_password: nil}
 
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
@@ -36,7 +36,7 @@ defmodule ProjectsApiWeb.AccountControllerTest do
       assert %{
                "id" => ^id,
                "email" => "some email",
-               "hash_password" => "some hash_password"
+               "hashed_password" => "some hashed_password"
              } = json_response(conn, 200)["data"]
     end
 
@@ -58,7 +58,7 @@ defmodule ProjectsApiWeb.AccountControllerTest do
       assert %{
                "id" => ^id,
                "email" => "some updated email",
-               "hash_password" => "some updated hash_password"
+               "hashed_password" => "some updated hashed_password"
              } = json_response(conn, 200)["data"]
     end
 

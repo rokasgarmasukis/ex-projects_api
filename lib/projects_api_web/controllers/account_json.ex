@@ -19,7 +19,7 @@ defmodule ProjectsApiWeb.AccountJSON do
     %{
       id: account.id,
       email: account.email,
-      hash_password: account.hash_password
+      hashed_password: account.hashed_password
     }
   end
 end

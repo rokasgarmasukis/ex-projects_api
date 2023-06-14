@@ -12,7 +12,7 @@ defmodule ProjectsApi.AccountsFixtures do
       attrs
       |> Enum.into(%{
         email: "some email",
-        hash_password: "some hash_password"
+        hashed_password: "some hashed_password"
       })
       |> ProjectsApi.Accounts.create_account()
 
