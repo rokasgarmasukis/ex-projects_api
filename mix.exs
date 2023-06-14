@@ -1,6 +1,6 @@
 defmodule ProjectsApi.MixProject do
   use Mix.Project
-
+  
   def project do
     [
       app: :projects_api,

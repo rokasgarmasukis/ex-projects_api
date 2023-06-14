@@ -7,5 +7,7 @@ defmodule ProjectsApiWeb.Router do
 
   scope "/api", ProjectsApiWeb do
     pipe_through :api
+
+    get "/", DefaultController, :index
   end
 end
